@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* White background */
+            color: black; /* Black text */
+        }
+
+        .navbar {
+            background-color: #000000; /* Black background for navbar */
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fb8500; /* Orange color for navbar text */
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 18px;
+        }
+
+        .header {
+            height: 100vh; /* Full viewport height */
+            background-color: #000000; /* Dark background for header */
+            background-image: url('background-image.jpg'); /* Background image for header */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Ensure image does not overflow */
+        }
+
+        .header h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 72px;
+            margin: 0;
+            padding: 20px;
+            text-transform: uppercase;
+            color: black; /* Black text */
+            position: relative;
+            z-index: 1; /* Ensure text is above image */
+            transition: color 0.3s ease; /* Smooth transition for color change */
+        }
+
+        .header h1:hover {
+            color: #fb8500; /* Orange color on hover */
+        }
+
+        .header p {
+            font-family: 'Shadows Into Light', cursive; /* Handwriting font */
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .projects {
+            padding: 50px;
+            text-align: center;
+            margin-top: 150px; /* Space below navbar */
+        }
+
+        .project {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            overflow: hidden; /* Ensure overflow hidden for slideshow */
+        }
+
+        .project img {
+            width: 400px; /* Larger image size */
+            height: auto;
+            border-radius: 10px;
+            margin-right: 40px; /* Increased spacing */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project img:hover {
+            transform: scale(1.1); /* Scale up image on hover */
+        }
+
+        .project-text {
+            flex: 1;
+            text-align: left; /* Align text left */
+            max-width: calc(100% - 440px); /* Adjusted max-width */
+        }
+
+        .project h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: black; /* Black text for project headers */
+        }
+
+        .project p {
+            font-size: 18px;
+        }
+
+        .project .party-text {
+            font-family: 'Shadows Into Light', cursive; /* Handwriting font */
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(251, 133, 0, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(251, 133, 0, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Connect</a>
+    </div>
+
+    <div class="header">
+        <div class="header-content">
+            <h1>What Do We Do?</h1>
+            <p>We help people and make parties.</p>
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="project">
+            <img src="project-image-1.jpg" alt="Project 1">
+            <div class="project-text">
+                <h2>Project 1</h2>
+                <p>Planning Party</p>
+                <p class="party-text">We Do</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="project-image-2.jpg" alt="Project 2">
+            <div class="project-text">
+                <h2>Project 2</h2>
+                <p>Planning Party</p>
+                <p class="party-text">We Do</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="project-image-3.jpg" alt="Project 3">
+            <div class="project-text">
+                <h2>Project 3</h2>
+                <p>Planning Party</p>
+                <p class="party-text">We Do</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="project-image-4.jpg" alt="Project 4">
+            <div class="project-text">
+                <h2>Project 4</h2>
+                <p>Planning Party</p>
+                <p class="party-text">We Do</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('.header');
+            var scrollPosition = window.scrollY;
+            header.style.opacity = 1 - scrollPosition / 800; // Adjust the value based on scroll distance
+        });
+    </script>
+
+</body>
+</html>
